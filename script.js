@@ -19,7 +19,18 @@ botao.addEventListener("click", function () {
         return;
     }
 
-    console.log(nome.value);
-    console.log(profissao.value);
-    console.log("FINAL");
+    var usuario = new Usuario;
+
+    var cadastrar = usuario.cadastrar({
+        nome: nome.value,
+        profissao: profissao.value
+    });
+
+    if (cadastrar.erro) {
+        alert(cadastrar.msg);
+        return;
+    } else {
+        alert(cadastrar.msg);
+        // atualizar lista
+    }
 });
