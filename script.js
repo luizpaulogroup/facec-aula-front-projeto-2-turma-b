@@ -1,6 +1,7 @@
 var nome = document.getElementById("nome");
 var profissao = document.getElementById("profissao");
 var botao = document.getElementById("botao");
+var conteudoListaUsuarios = document.getElementById("conteudo-lista-usuarios");
 
 botao.addEventListener("click", function () {
     if (nome.value == "") {
@@ -30,7 +31,6 @@ botao.addEventListener("click", function () {
         alert(cadastrar.msg);
         return;
     } else {
-        alert(cadastrar.msg);
         // atualizar lista
     }
 });
